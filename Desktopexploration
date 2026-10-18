@@ -1,0 +1,374 @@
+<!-- ================================================================= -->
+<!--          INTERACTIVE ACTIVITY: DESKTOP HOTSPOT EXPLORATION        -->
+<!-- ================================================================= -->
+
+<!doctype html>
+<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20261016-04-d5e3a25","C":{"Abril Fatface":"YACgEZbkUVE,0","Albert Sans":"YAHO2HRfeh4,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo Black":"YACgEZulLoA,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Baloo 2":"YAHO2IcQUcM,0","Barlow Condensed":"YAFdJljEuFc,0","Barlow":"YAFdJsyuOPM,1","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Cairo":"YAFdtXpDzlQ,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Cinzel":"YACgEeV8bIQ,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Figtree":"YAHO2b-mV7A,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Fredoka":"YACgEZml080,0","Georgia":"YAGzXkO0pEM,0","Hanken Grotesk":"YAHO2VB9G0I,0","Helvetica":"YAFcf7zkXN0,0","IBM Plex Mono":"YAFdJkmvhGI,0","IBM Plex Sans":"YAFdJgT0SHI,0","Impact":"YAFcfnjI7Vk,0","Instrument Sans":"YAHO2bKyaSQ,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Italiana":"YAHO2Toik_w,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Karla":"YAHO2V2NSXM,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Libre Caslon Display":"YAHO2XhLmt0,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Noto Sans JP":"YAFdJiHXlcI,0","Noto Sans KR":"YAGsojZj-RQ,0","Nunito Sans":"YAFdtQJYB9w,1","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Open Sans":"YAFdJt8dAY0,1","Oswald":"YACgEQY10lw,0","Outfit":"YAHO2nVlg14,0","Pacifico":"YADLjORQ1u4,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAHO2gdhi18,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Public Sans":"YAFdJj8NdaU,1","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","STIX Two Text":"YAHO2joycuk,0","Sarabun":"YAFdJssSnME,0","Schibsted Grotesk":"YAHO2sWydRk,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Space Grotesk":"YAHO2sjPCSM,0","Space Mono":"YADW1-vpsoc,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0"}}');</script><script src="/_sdk/05db820ba1544614.telemetry_sdk.js" integrity="sha512-a7JzkQDDcioSXpM61nxTfeRW7PcxWQy5+BrhyeTFmQFsXJ+Gncm0y50u7fTA7qOPegFnRgqCfa0mGUOK1yjDWQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desktop Exploration</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Fraunces:wght@600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#17354a; --teal:#087e83; --cream:#f5f4ec; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"DM Sans",sans-serif; color:var(--ink); }
+    .app-shell { width:100%; min-height:100%; background:radial-gradient(circle at 8% 12%,#d9f3eb 0,transparent 34%),#f5f4ec; }
+    .heading-font { font-family:"Fraunces",serif; }
+
+    .desktop-frame {
+      background:linear-gradient(135deg,#344c56,#142936 64%,#394c55);
+      padding:12px 12px 0; border-radius:22px 22px 10px 10px;
+      box-shadow:0 25px 55px #193b4b29, inset 0 1px 1px #ffffff55;
+    }
+    .desktop-screen {
+      position:relative; isolation:isolate; width:100%; aspect-ratio:16/9;
+      min-height:290px; overflow:hidden; border-radius:11px 11px 3px 3px;
+      background:#385c70;
+      box-shadow:inset 0 0 0 1px #ffffff40;
+    }
+    .desktop-wallpaper {
+      position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+      filter:saturate(.83) contrast(1.04);
+    }
+    .desktop-screen::after {
+      content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+      background:linear-gradient(112deg,#071d2c52 0%,transparent 42%,#edfaff1c 75%,#09263430 100%);
+      box-shadow:inset 0 0 32px #071d2c55;
+    }
+    .screen-icons {
+      position:absolute; z-index:2; left:3.1%; top:7%;
+      display:flex; flex-direction:column; gap:clamp(9px,1.8vw,22px);
+    }
+    .screen-icon {
+      display:flex; flex-direction:column; align-items:center; gap:3px;
+      width:clamp(43px,7vw,72px); color:white; font-weight:600;
+      font-size:clamp(8px,1vw,11px); line-height:1.12; text-align:center;
+      text-shadow:0 1px 4px #081e2d,0 1px 2px #081e2d;
+    }
+    .icon-art {
+      display:grid; place-items:center; width:clamp(24px,3.7vw,36px);
+      height:clamp(25px,3.8vw,37px); filter:drop-shadow(0 3px 3px #09253688);
+    }
+    .folder-art {
+      position:relative; width:31px; height:23px; margin-top:5px;
+      border-radius:3px 4px 4px 4px;
+      background:linear-gradient(145deg,#fff2b4,#d3a74f);
+      box-shadow:inset 0 1px #fff8d4,0 2px 3px #142b4477;
+    }
+    .folder-art::before {
+      content:""; position:absolute; left:1px; top:-5px; width:13px; height:7px;
+      background:#e8c673; border-radius:3px 3px 0 0;
+    }
+    .bin-art {
+      position:relative; width:24px; height:27px; margin-top:5px;
+      background:linear-gradient(90deg,#c9e8ee,#fff,#bdd9e3);
+      border:1px solid #94b4c0; border-radius:2px 2px 5px 5px;
+      transform:perspective(50px) rotateX(-5deg);
+    }
+    .bin-art::before {
+      content:""; position:absolute; left:-3px; top:-5px; width:28px; height:5px;
+      border-radius:3px; background:linear-gradient(#fff,#b9d5df);
+      border:1px solid #9dbcc6;
+    }
+    .bin-art::after { content:"♻"; position:absolute; inset:3px 0 0; color:#438aa2; font-size:17px; text-shadow:none; }
+    .notes-art {
+      width:25px; height:29px; background:linear-gradient(130deg,#fffef5,#e4ebe5);
+      border-radius:2px; box-shadow:2px 2px 0 #c5d8dd;
+      color:#658fa0; font-size:17px; line-height:28px; text-shadow:none;
+    }
+
+    .sample-window {
+      position:absolute; z-index:2; left:31%; top:16%; width:48%; height:61%;
+      overflow:hidden; border:1px solid #ffffffb5; border-radius:9px;
+      background:#fafcfbeF;
+      box-shadow:0 18px 40px #08233278,0 1px 1px #ffffff inset;
+      backdrop-filter:blur(7px);
+    }
+    .window-bar {
+      height:clamp(28px,16%,39px); display:flex; align-items:center;
+      justify-content:space-between; padding:0 10px;
+      background:#f5f8f8; border-bottom:1px solid #d9e3e6;
+      color:#344c59; font-size:clamp(9px,1.1vw,12px); font-weight:700;
+    }
+    .window-title { display:flex; align-items:center; gap:7px; white-space:nowrap; }
+    .tiny-folder { width:13px; height:10px; background:#e7bb60; border-radius:2px; }
+    .window-controls { letter-spacing:clamp(2px,.8vw,9px); white-space:nowrap; color:#617780; font-weight:500; }
+    .window-toolbar {
+      height:17%; min-height:24px; display:flex; align-items:center; gap:8px;
+      padding:0 11px; background:#ffffff; border-bottom:1px solid #e4e9ea;
+      color:#637e8a; font-size:clamp(9px,1vw,12px);
+    }
+    .address-bar {
+      margin-left:3px; flex:1; overflow:hidden; white-space:nowrap;
+      border:1px solid #e0e8ea; border-radius:4px; padding:3px 7px;
+      background:#fafcfc; color:#506a75;
+    }
+    .window-body { display:flex; height:calc(83% - clamp(28px,16%,39px)); min-height:0; }
+    .window-sidebar { width:30%; padding:10px 6px; border-right:1px solid #e7eeef; background:#f7faf9; }
+    .side-line { height:6px; margin:0 0 11px 3px; border-radius:5px; background:#d6e5e7; }
+    .side-line:nth-child(2) { width:70%; background:#9bd5db; }
+    .side-line:nth-child(3) { width:84%; }
+    .side-line:nth-child(4) { width:60%; }
+    .file-grid { display:flex; gap:clamp(8px,2vw,22px); align-items:flex-start; padding:13px 10px; }
+    .file-item { width:clamp(27px,4vw,44px); text-align:center; }
+    .file-item .folder-art { transform:scale(.75); transform-origin:top left; margin:0 0 -2px 4px; }
+    .file-item i { display:block; height:4px; margin:2px auto; width:70%; border-radius:3px; background:#c8d5d9; }
+
+    .taskbar {
+      position:absolute; z-index:3; bottom:0; left:0; right:0;
+      height:11%; min-height:34px; display:flex; align-items:center;
+      gap:clamp(5px,1vw,11px); padding:0 2.3%;
+      background:#e7eff0db; border-top:1px solid #ffffffb0;
+      box-shadow:0 -5px 18px #082d3b22;
+      backdrop-filter:blur(18px);
+    }
+    .start-symbol {
+      display:grid; grid-template-columns:repeat(2,7px); gap:2px;
+      margin-right:clamp(3px,.7vw,9px); filter:drop-shadow(0 1px 1px #26576a50);
+    }
+    .start-symbol i { width:7px; height:7px; background:#167aa9; }
+    .search-pill {
+      width:clamp(24px,12vw,115px); height:21px; border-radius:12px;
+      border:1px solid #ffffffba; background:#ffffffa5;
+      display:flex; align-items:center; gap:5px; padding:0 7px;
+      color:#536b75; font-size:10px;
+    }
+    .search-glass { width:9px; height:9px; border:1.5px solid #587680; border-radius:50%; position:relative; flex:none; }
+    .search-glass::after { content:""; position:absolute; width:4px; height:1px; right:-3px; bottom:-2px; background:#587680; transform:rotate(45deg); }
+    .bar-app { width:clamp(15px,2vw,21px); height:clamp(15px,2vw,21px); border-radius:5px; box-shadow:0 2px 3px #2b637b40; }
+    .bar-app.folder { background:linear-gradient(#f9da7a,#d9a84d); }
+    .bar-app.browser { border-radius:50%; background:conic-gradient(#2bb39d,#2577bf,#2bb39d); border:3px solid #ffffff83; }
+    .bar-app.notes { background:linear-gradient(135deg,#fff,#9dd0d2); }
+    .bar-spacer { flex:1; }
+    .tray { white-space:nowrap; display:flex; align-items:center; gap:clamp(3px,.6vw,8px); color:#294c5d; font-size:clamp(8px,1vw,11px); font-weight:700; }
+    .tray-clock { text-align:right; line-height:1.1; }
+
+    .circle-guide {
+      position:absolute; z-index:3; left:50%; top:44%; transform:translate(-50%,-50%);
+      width:min(74%,430px); aspect-ratio:1; max-height:88%; border:2px dashed #ffffff7a;
+      border-radius:50%; pointer-events:none; box-shadow:0 0 0 1px #17354a33;
+    }
+    .hotspot {
+      position:absolute; z-index:5; width:clamp(27px,3.4vw,37px);
+      height:clamp(27px,3.4vw,37px); display:grid; place-items:center;
+      border:2px solid white; border-radius:50%; background:#ffd166;
+      color:#17354a; box-shadow:0 2px 0 #b36c32,0 4px 12px #09354c99;
+      transform:translate(-50%,-50%); transition:transform .18s,background .18s;
+      cursor:pointer;
+    }
+    .hotspot:hover { transform:translate(-50%,-50%) scale(1.14); }
+    .hotspot:focus-visible,.close-button:focus-visible { outline:4px solid #ffde82; outline-offset:4px; }
+    .hotspot.explored { background:#bce8d1; box-shadow:0 2px 0 #438f72,0 4px 12px #09354c99; }
+    .hotspot.active { background:#fff; outline:3px solid #17354a; outline-offset:2px; }
+    .cross { position:relative; width:14px; height:14px; }
+    .cross::before,.cross::after {
+      content:""; position:absolute; top:50%; left:50%; border-radius:2px;
+      background:currentColor; transform:translate(-50%,-50%);
+    }
+    .cross::before { width:14px; height:3px; }
+    .cross::after { width:3px; height:14px; }
+    .hotspot.explored .cross::before { width:7px; height:3px; transform:translate(-85%,35%) rotate(45deg); }
+    .hotspot.explored .cross::after { width:14px; height:3px; transform:translate(-35%,0) rotate(-45deg); }
+    /* The marker centers sit beside the artwork so the icon itself remains visible. */
+    .spot-icons { left:17%; top:17%; }
+    .spot-recycle { left:17%; top:38%; }
+    .spot-windows { left:76%; top:26%; }
+    .spot-desktop { left:88%; top:43%; }
+    .spot-start { left:8%; top:94%; }
+    .spot-taskbar { left:55%; top:94%; }
+    .spot-notifications { left:85%; top:94%; }
+
+    .computer-stand { width:18%; height:28px; margin:auto; background:linear-gradient(90deg,#adc6ca,#e3eded,#adc6ca); }
+    .computer-foot { width:34%; height:8px; margin:auto; border-radius:12px 12px 3px 3px; background:#9eb9bd; }
+    .info-card { min-height:172px; }
+    .info-panel[hidden],.completion[hidden],.intro-panel[hidden] { display:none; }
+    @media(max-width:640px) {
+      .desktop-frame { padding:7px 7px 0; border-radius:13px 13px 5px 5px; }
+      .desktop-screen { min-height:255px; aspect-ratio:4/3; }
+      .desktop-wallpaper { object-position:center; }
+      .circle-guide { width:77%; }
+      .screen-icons { left:2%; top:8%; gap:16px; }
+      .screen-icon { width:43px; font-size:8px; }
+      .icon-art { transform:scale(.78); height:26px; }
+      .sample-window { left:31%; top:17%; width:54%; height:57%; }
+      .window-sidebar { width:23%; }
+      .window-toolbar { gap:4px; }
+      .search-pill { width:24px; padding:0 6px; }
+      .search-label { display:none; }
+      .spot-icons { left:21%; top:17%; }
+      .spot-recycle { left:21%; top:40%; }
+      .spot-windows { left:82%; top:27%; }
+      .spot-desktop { left:89%; top:58%; }
+      .spot-start { left:12%; top:93%; }
+      .spot-taskbar { left:58%; top:93%; }
+      .spot-notifications { left:86%; top:93%; }
+      .computer-stand { height:18px; }
+    }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; animation:none!important; } }
+  </style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="/_sdk/570d53629f0b998d.data_sdk.js" type="text/javascript" integrity="sha512-JEN39+V+Nvv9ZZOVS8vNk1iA9ErZJHTdgOw9KzPuMiK7m0I+KPEr/wmTnCFIQVsDjCZgJWfGnFi1IQh2Io2qyA=="></script>
+  <script src="/_sdk/7825871aa95c503d.editing_sdk.js" type="text/javascript" integrity="sha512-2lFhP7fVLyI/xh1XVD1wGvcEUDBQxBW40AsWL6PQ5RZg0/hxM41hBHE/wQF1zqhE8vvzASF/osL1pnlucLWnaQ=="></script>
+  <script src="/_sdk/f195026a424c1f85.resizing_sdk.js" type="text/javascript" integrity="sha512-8On4Z+AXh1abEzZJ9Dbn9wOvFg+k1LsAaAzKGQ7LlfgXajZ9xEmZaZ1QVzv0AWhCZtCsEpWSOG9DgLri06TS7A=="></script>
+ </head>
+ <body data-template-id="__page-root" class="app-shell" style="background: rgb(245, 244, 236);">
+  <div class="w-full px-4 py-8 sm:px-8 sm:py-12">
+   <div class="mx-auto max-w-6xl">
+    <header class="mb-7 md:mb-10">
+     <div data-template-id="eyebrow" class="canva-tag inline-block rounded-full px-4 py-2 mb-4" style="background: rgb(214, 241, 231); color: rgb(8, 126, 131); font-weight: 800; font-style: normal; font-size: 12px; letter-spacing: 0.08rem;">INTERACTIVE LEARNING ACTIVITY</div>
+     <h1 data-template-id="page-title" class="canva-text heading-font font-bold leading-tight mb-3" style="color: rgb(23, 53, 74); font-weight: 700; font-style: normal; font-size: 32px;">Desktop Exploration</h1>
+     <p data-template-id="instructions" class="canva-text max-w-3xl leading-relaxed" style="color: rgb(56, 89, 107); font-weight: 400; font-style: normal; font-size: 18px;">Click on each cross in the circle to reveal information about the various desktop features.</p>
+    </header>
+    <main class="grid gap-7 lg:grid-cols-[minmax(0,1.7fr)_minmax(275px,0.8fr)] lg:items-start">
+     <section aria-label="Interactive computer desktop">
+      <div class="desktop-frame">
+       <div class="desktop-screen"><img data-template-id="desktop-wallpaper" class="canva-image desktop-wallpaper" loading="lazy" src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Sunlit mountain landscape used as the computer desktop wallpaper">
+        <div class="screen-icons" aria-hidden="true">
+         <div class="screen-icon">
+          <span class="icon-art"><span class="folder-art"></span></span><span>Files</span>
+         </div>
+         <div class="screen-icon">
+          <span class="icon-art"><span class="bin-art"></span></span><span>Recycle Bin</span>
+         </div>
+         <div class="screen-icon">
+          <span class="icon-art"><span class="notes-art">≡</span></span><span>Notes</span>
+         </div>
+        </div>
+        <div class="sample-window" aria-hidden="true">
+         <div class="window-bar"><span class="window-title"><span class="tiny-folder"></span>My files</span> <span class="window-controls">− □ ×</span>
+         </div>
+         <div class="window-toolbar">
+          <span>‹</span><span>›</span><span class="address-bar">Home &nbsp;›&nbsp; My files</span>
+         </div>
+         <div class="window-body">
+          <div class="window-sidebar">
+           <div class="side-line"></div>
+           <div class="side-line"></div>
+           <div class="side-line"></div>
+           <div class="side-line"></div>
+          </div>
+          <div class="file-grid">
+           <div class="file-item">
+            <div class="folder-art"></div><i></i>
+           </div>
+           <div class="file-item">
+            <div class="folder-art"></div><i></i>
+           </div>
+           <div class="file-item">
+            <div class="folder-art"></div><i></i>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="taskbar" aria-hidden="true"><span class="start-symbol"><i></i><i></i><i></i><i></i></span> <span class="search-pill"><span class="search-glass"></span><span class="search-label">Search</span></span> <span class="bar-app folder"></span><span class="bar-app browser"></span><span class="bar-app notes"></span> <span class="bar-spacer"></span> <span class="tray"><span>⌃</span><span>◖</span><span>◕</span><span class="tray-clock">10:24<br>
+           17/10</span></span>
+        </div>
+        <div class="circle-guide" aria-hidden="true"></div><button type="button" class="hotspot spot-desktop" data-feature="desktop" aria-label="Explore desktop; not yet explored" aria-controls="panel-desktop" aria-pressed="false"><span class="cross" aria-hidden="true"></span></button> <button type="button" class="hotspot spot-icons" data-feature="icons" aria-label="Explore icons; not yet explored" aria-controls="panel-icons" aria-pressed="false"><span class="cross" aria-hidden="true"></span></button> <button type="button" class="hotspot spot-windows" data-feature="windows" aria-label="Explore windows; not yet explored" aria-controls="panel-windows" aria-pressed="false"><span class="cross" aria-hidden="true"></span></button> <button type="button" class="hotspot spot-recycle" data-feature="recycle" aria-label="Explore recycle bin; not yet explored" aria-controls="panel-recycle" aria-pressed="false"><span class="cross" aria-hidden="true"></span></button> <button type="button" class="hotspot spot-taskbar" data-feature="taskbar" aria-label="Explore taskbar; not yet explored" aria-controls="panel-taskbar" aria-pressed="false"><span class="cross" aria-hidden="true"></span></button> <button type="button" class="hotspot spot-start" data-feature="start" aria-label="Explore Start menu; not yet explored" aria-controls="panel-start" aria-pressed="false"><span class="cross" aria-hidden="true"></span></button> <button type="button" class="hotspot spot-notifications" data-feature="notifications" aria-label="Explore notification area; not yet explored" aria-controls="panel-notifications" aria-pressed="false"><span class="cross" aria-hidden="true"></span></button>
+       </div>
+      </div>
+      <div class="computer-stand" aria-hidden="true"></div>
+      <div class="computer-foot" aria-hidden="true"></div>
+      <p data-template-id="explored-key" class="canva-text text-center mt-5" style="color: rgb(56, 89, 107); font-weight: 400; font-style: normal; font-size: 14px;">Gold cross = new discovery  ·  Green check = explored</p>
+     </section>
+     <aside class="space-y-5">
+      <div data-template-id="progress-card" class="canva-card rounded-2xl p-5 shadow-sm" style="background: rgb(255, 255, 255);">
+       <div class="flex items-center justify-between gap-3 mb-3">
+        <h2 data-template-id="progress-heading" class="canva-text font-bold" style="color: rgb(23, 53, 74); font-weight: 700; font-style: normal; font-size: 24px;">Your discoveries</h2><span id="progress-count" class="font-bold text-[#087e83]" aria-live="polite">0 / 7</span>
+       </div>
+       <div class="h-3 rounded-full bg-[#dbeae8] overflow-hidden" role="progressbar" id="progress-bar" aria-label="Features explored" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0">
+        <div id="progress-fill" class="h-full rounded-full bg-[#087e83] transition-all duration-300" style="width:0%"></div>
+       </div>
+      </div>
+      <div data-template-id="info-card" class="canva-card info-card rounded-2xl p-6 shadow-sm border border-[#d8e5e5]" style="background: rgb(255, 255, 255);">
+       <div id="intro-panel" class="intro-panel">
+        <div class="mb-3 text-3xl" aria-hidden="true">
+         ✳
+        </div>
+        <h2 data-template-id="intro-title" class="canva-text heading-font font-bold mb-2" style="color: rgb(23, 53, 74); font-weight: 700; font-style: normal; font-size: 24px;">Ready to explore?</h2>
+        <p data-template-id="intro-copy" class="canva-text leading-relaxed" style="color: rgb(56, 89, 107); font-weight: 400; font-style: normal; font-size: 16px;">Choose any gold cross on the computer screen. Each one reveals something new about using a desktop.</p>
+       </div>
+       <div id="feature-panels" aria-live="polite">
+        <section id="panel-desktop" class="info-panel" hidden="">
+         <h2 data-template-id="desktop-title" class="canva-text heading-font font-bold mb-3" style="color: rgb(23, 53, 74); font-weight: 700; font-style: normal; font-size: 24px;">The desktop</h2>
+         <p data-template-id="desktop-copy" class="canva-text leading-relaxed" style="color: rgb(56, 89, 107); font-weight: 400; font-style: normal; font-size: 16px;">The desktop is the main screen you see after a computer starts. Think of it as your workspace: it holds shortcuts and gives you a place to open programs.</p>
+        </section>
+        <section id="panel-icons" class="info-panel" hidden="">
+         <h2 data-template-id="icons-title" class="canva-text heading-font font-bold mb-3" style="color: rgb(23, 53, 74); font-weight: 700; font-style: normal; font-size: 24px;">Icons</h2>
+         <p data-template-id="icons-copy" class="canva-text leading-relaxed" style="color: rgb(56, 89, 107); font-weight: 400; font-style: normal; font-size: 16px;">Icons are small pictures that represent apps, files, or folders. Selecting an icon can open the item it represents.</p>
+        </section>
+        <section id="panel-windows" class="info-panel" hidden="">
+         <h2 data-template-id="windows-title" class="canva-text heading-font font-bold mb-3" style="color: rgb(23, 53, 74); font-weight: 700; font-style: normal; font-size: 24px;">Windows</h2>
+         <p data-template-id="windows-copy" class="canva-text leading-relaxed" style="color: rgb(56, 89, 107); font-weight: 400; font-style: normal; font-size: 16px;">A window is a framed area where an app or folder appears. You can usually move, resize, minimize, or close a window.</p>
+        </section>
+        <section id="panel-recycle" class="info-panel" hidden="">
+         <h2 data-template-id="recycle-title" class="canva-text heading-font font-bold mb-3" style="color: rgb(23, 53, 74); font-weight: 700; font-style: normal; font-size: 24px;">Recycle Bin</h2>
+         <p data-template-id="recycle-copy" class="canva-text leading-relaxed" style="color: rgb(56, 89, 107); font-weight: 400; font-style: normal; font-size: 16px;">The Recycle Bin holds files you have deleted. You may be able to restore a file from it before the bin is emptied.</p>
+        </section>
+        <section id="panel-taskbar" class="info-panel" hidden="">
+         <h2 data-template-id="taskbar-title" class="canva-text heading-font font-bold mb-3" style="color: rgb(23, 53, 74); font-weight: 700; font-style: normal; font-size: 24px;">Taskbar</h2>
+         <p data-template-id="taskbar-copy" class="canva-text leading-relaxed" style="color: rgb(56, 89, 107); font-weight: 400; font-style: normal; font-size: 16px;">The taskbar is the strip along the bottom of the screen. It helps you find open apps and switch between them.</p>
+        </section>
+        <section id="panel-start" class="info-panel" hidden="">
+         <h2 data-template-id="start-title" class="canva-text heading-font font-bold mb-3" style="color: rgb(23, 53, 74); font-weight: 700; font-style: normal; font-size: 24px;">Start menu</h2>
+         <p data-template-id="start-copy" class="canva-text leading-relaxed" style="color: rgb(56, 89, 107); font-weight: 400; font-style: normal; font-size: 16px;">The Start menu helps you find and launch apps, search for things, and reach computer settings. Open it using the Start button on the taskbar.</p>
+        </section>
+        <section id="panel-notifications" class="info-panel" hidden="">
+         <h2 data-template-id="notifications-title" class="canva-text heading-font font-bold mb-3" style="color: rgb(23, 53, 74); font-weight: 700; font-style: normal; font-size: 24px;">Notification area</h2>
+         <p data-template-id="notifications-copy" class="canva-text leading-relaxed" style="color: rgb(56, 89, 107); font-weight: 400; font-style: normal; font-size: 16px;">Near the end of the taskbar, the notification area shows useful status symbols, such as sound and network connection, alongside the clock.</p>
+        </section>
+       </div><button id="close-panel" data-template-id="close-button" type="button" class="canva-button close-button mt-5 px-4 py-2 rounded-lg font-bold hover:opacity-80" hidden="" style="background: rgb(214, 241, 231); color: rgb(7, 93, 102); font-weight: 700; font-style: normal; font-size: 16px;">Close explanation</button>
+      </div>
+      <div id="completion" data-template-id="completion-card" class="canva-banner completion rounded-2xl p-5 shadow-sm" role="status" hidden="" style="background: rgb(214, 241, 231);">
+       <h2 data-template-id="completion-title" class="canva-text heading-font font-bold mb-2" style="color: rgb(7, 93, 102); font-weight: 700; font-style: normal; font-size: 24px;">Brilliant work! ✨</h2>
+       <p data-template-id="completion-copy" class="canva-text" style="color: rgb(36, 90, 87); font-weight: 400; font-style: normal; font-size: 16px;">You explored all seven desktop features. You can tap any cross again to review what you learned.</p>
+      </div>
+     </aside>
+    </main>
+   </div>
+  </div>
+  <script>
+    const hotspots = [...document.querySelectorAll('.hotspot')];
+    const explored = new Set();
+    const intro = document.getElementById('intro-panel');
+    const panels = [...document.querySelectorAll('.info-panel')];
+    const closeButton = document.getElementById('close-panel');
+    let active = null;
+
+    function showFeature(feature) {
+      const next = active === feature ? null : feature;
+      active = next;
+      intro.hidden = next !== null;
+      panels.forEach(panel => { panel.hidden = panel.id !== 'panel-' + next; });
+      closeButton.hidden = next === null;
+      hotspots.forEach(button => {
+        const selected = button.dataset.feature === next;
+        button.classList.toggle('active', selected);
+        button.setAttribute('aria-pressed', String(selected));
+      });
+    }
+
+    hotspots.forEach(button => {
+      button.addEventListener('click', () => {
+        const feature = button.dataset.feature;
+        if (!explored.has(feature)) {
+          explored.add(feature);
+          button.classList.add('explored');
+          button.setAttribute('aria-label', button.getAttribute('aria-label').replace('not yet explored', 'explored'));
+          document.getElementById('progress-count').textContent = explored.size + ' / ' + hotspots.length;
+          document.getElementById('progress-bar').setAttribute('aria-valuenow', String(explored.size));
+          document.getElementById('progress-fill').style.width = (explored.size / hotspots.length * 100) + '%';
+          if (explored.size === hotspots.length) document.getElementById('completion').hidden = false;
+        }
+        showFeature(feature);
+      });
+    });
+
+    closeButton.addEventListener('click', () => {
+      const previous = hotspots.find(button => button.dataset.feature === active);
+      showFeature(null);
+      if (previous) previous.focus();
+    });
+  </script>
+ 
+</body></html>
